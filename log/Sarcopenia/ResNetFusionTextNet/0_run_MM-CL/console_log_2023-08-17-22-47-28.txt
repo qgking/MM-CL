@@ -1,0 +1,17 @@
+Creating models....
+Model has param 12.64M
+data name  Sarcopenia
+data size  224
+Random dataset Seed: 111
+Train images 940: 
+Test images 236: 
+Load images: 940,positive: 396, negative: 544
+Load images: 236,positive: 94, negative: 142
+
+roc_auc : 0.8550
+acc : 0.8263
+f1score : 0.7807
+sensitivity : 0.7766
+specificity : 0.8592
+pre : 0.7849
+
