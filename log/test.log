@@ -1,0 +1,61 @@
+GPU available:  True
+CuDNN: 
+ True
+Loaded config file sucessfully.
+patch_x 224
+patch_y 224
+data_name Sarcopenia
+aug_num 1
+data_path ../../data
+model ResNetFusionTextNet
+classes 2
+n_channels 3
+backbone resnet18
+ema_decay 0.99
+anchors_size 8,16,32
+save_dir ../../log/Sarcopenia/ResNetFusionTextNet/0_run_MM-CL
+save_model_path ../../log/Sarcopenia/ResNetFusionTextNet/0_run_MM-CL/checkpoint
+config_file ../../log/Sarcopenia/ResNetFusionTextNet/0_run_MM-CL/configuration.txt
+load_dir ../../log/Sarcopenia/ResNetFusionTextNet/0_run_MM-CL
+load_model_path ../../log/Sarcopenia/ResNetFusionTextNet/0_run_MM-CL/checkpoint
+tmp_dir ../../log/Sarcopenia/ResNetFusionTextNet/0_run_MM-CL/tmp
+tensorboard_dir ../../log/Sarcopenia/ResNetFusionTextNet/0_run_MM-CL/tensorboard
+submission_dir ../../log/Sarcopenia/ResNetFusionTextNet/0_run_MM-CL/submissions
+log_file ../../log/Sarcopenia/ResNetFusionTextNet/0_run_MM-CL/console_log.txt
+learning_algorithm adam
+learning_rate 2.5e-4
+epsilon 1e-12
+min_lrate 1e-8
+clip 4.0
+n_epochs 100
+train_batch_size 32
+test_batch_size 1
+update_every 4
+gpu 0
+run_num MM-CL
+workers 0
+printfreq 1
+gpu_count 3
+load_best_epoch True
+patience 20
+nfold 5
+fp16 False
+
+GPU using status:  True
+Creating models....
+Model has param 12.64M
+data name  Sarcopenia
+data size  224
+Random dataset Seed: 111
+Train images 940: 
+Test images 236: 
+Load images: 940,positive: 396, negative: 544
+Load images: 236,positive: 94, negative: 142
+
+roc_auc : 0.8550
+acc : 0.8263
+f1score : 0.7807
+sensitivity : 0.7766
+specificity : 0.8592
+pre : 0.7849
+

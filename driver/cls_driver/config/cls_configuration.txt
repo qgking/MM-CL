@@ -1,0 +1,47 @@
+[Data]
+patch_x = 224
+patch_y = 224
+data_name = Sarcopenia
+aug_num = 1
+data_path = ../../data
+
+[Network]
+model = ResNetFusionTextNet
+classes = 2
+n_channels = 3
+backbone = resnet18
+ema_decay=0.99
+anchors_size = 8,16,32
+
+[Save]
+save_dir = ../../log/${Data:data_name}/${Network:model}/${Run:gpu}_run_${Run:run_num}
+save_model_path = ${save_dir}/checkpoint
+config_file = ${save_dir}/configuration.txt
+load_dir = ${Save:save_dir}
+load_model_path = ${load_dir}/checkpoint
+tmp_dir = ${save_dir}/tmp
+tensorboard_dir = ${save_dir}/tensorboard
+submission_dir = ${load_dir}/submissions
+log_file = ${save_dir}/console_log.txt
+
+[Optimizer]
+learning_algorithm = adam
+learning_rate = 2.5e-4
+epsilon = 1e-12
+min_lrate = 1e-8
+clip = 4.0
+
+[Run]
+n_epochs = 100
+train_batch_size = 32
+test_batch_size = 1
+update_every = 4
+gpu = 0
+run_num = MM-CL
+workers = 0
+printfreq = 1
+gpu_count = 3
+load_best_epoch = True
+patience = 20
+nfold = 5
+fp16 = False
