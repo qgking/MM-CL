@@ -1,5 +1,5 @@
 ### MM-CL
-
+ 
 **Multi-modality contrastive learning for sarcopenia screening from hip X-rays and clinical information** published in MICCAI 2023
 
 by Qiangguo Jin, Changjiang Zou, Changming Sun, Hui Cui, Changming Sun, Shu-Wei Huang, Yi-Jie Kuo, Ping Xuan, Leilei Cao, Ran Su, Leyi Wei, Henry B.L. Duh, and Yu-Pin Chen
